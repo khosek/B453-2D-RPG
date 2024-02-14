@@ -32,4 +32,10 @@ public static class Enums
         wisdom,
         charisma
     }
+
+    public enum AttackType
+    {
+        attack,
+        heal
+    }
 }
