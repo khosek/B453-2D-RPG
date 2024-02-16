@@ -4,12 +4,12 @@ using UnityEngine;
 
 public struct AbilityScores
 {
-    public int strength;
-    public int dexterity;
-    public int constitution;
-    public int intelligence;
-    public int wisdom;
-    public int charisma;
+    public int Strength;
+    public int Dexterity;
+    public int Constitution;
+    public int Intelligence;
+    public int Wisdom;
+    public int Charisma;
 }
 
 public class Character
@@ -17,46 +17,46 @@ public class Character
     
     string name;
 
-    Enums.CharacterClass charClass;
-    Enums.CharacterType charType;
-    Enums.AbilityScoreNames charAbilityName;
+    CharacterClass charClass;
+    CharacterType charType;
+    AbilityScoreNames charAbilityName;
 
     [SerializeField] GameObject prefab;
     AbilityScores charAbilityScores;
 
-    public Character(string name, Enums.CharacterClass charClass, Enums.CharacterType charType)
+    public Character(string name, CharacterClass charClass, CharacterType charType, AbilityScores abilityScores)
     {
         this.name = name;
         this.charClass = charClass;
         this.charType = charType;
-        charAbilityScores = new AbilityScores();
+        this.charAbilityScores = abilityScores;
     }
 
-    public int GetAbilityScoreBonus(Enums.AbilityScoreNames abilityName)
+    public int GetAbilityScoreBonus(AbilityScoreNames abilityName)
     {
-        if (abilityName == Enums.AbilityScoreNames.strength)
+        if (abilityName == AbilityScoreNames.Strength)
         {
-            return charAbilityScores.strength;
+            return charAbilityScores.Strength;
         }
-        else if (abilityName == Enums.AbilityScoreNames.dexterity)
+        else if (abilityName == AbilityScoreNames.Dexterity)
         {
-            return charAbilityScores.dexterity;
+            return charAbilityScores.Dexterity;
         }
-        else if (abilityName == Enums.AbilityScoreNames.constitution)
+        else if (abilityName == AbilityScoreNames.Constitution)
         {
-            return charAbilityScores.constitution;
+            return charAbilityScores.Constitution;
         }
-        else if (abilityName == Enums.AbilityScoreNames.intelligence)
+        else if (abilityName == AbilityScoreNames.Intelligence)
         {
-            return charAbilityScores.intelligence;
+            return charAbilityScores.Intelligence;
         }
-        else if (abilityName == Enums.AbilityScoreNames.wisdom)
+        else if (abilityName == AbilityScoreNames.Wisdom)
         {
-            return charAbilityScores.wisdom;
+            return charAbilityScores.Wisdom;
         }
         else
         {
-            return charAbilityScores.charisma;
+            return charAbilityScores.Charisma;
         }
     }
 }

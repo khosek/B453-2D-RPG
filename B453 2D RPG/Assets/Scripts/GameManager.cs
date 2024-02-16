@@ -8,15 +8,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public static List<Character> characters;
+
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
+            Destroy(this);
         }
         else
         {
-            Destroy(this);
+            instance = this;
+            DontDestroyOnLoad(this);
         }
     }
 
@@ -28,5 +31,15 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         Application.Quit();
+    }
+
+    public void AddCharacter(Character character)
+    {
+        characters.Add(character);
+    }
+
+    public void ChangeScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }

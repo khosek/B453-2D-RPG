@@ -2,40 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Enums
-{
-    public enum CharacterClass
+public enum CharacterClass
     {
-        none,
-        angler,
-        crabomancer,
-        lobsterbarian,
-        puffertank,
-        starfishWizard,
-        needlefishSniper
+        Paladin,
+        Mage,
+        Thief,
+        Cleric
     }
 
     public enum CharacterType
     {
-        none,
-        melee,
-        ranged,
-        magic
+        Player,
+        Enemy
     }
 
     public enum AbilityScoreNames
     {
-        strength,
-        dexterity,
-        constitution,
-        intelligence,
-        wisdom,
-        charisma
+        Strength,
+        Dexterity,
+        Constitution,
+        Intelligence,
+        Wisdom,
+        Charisma
     }
 
     public enum AttackType
     {
-        attack,
-        heal
+        Attack,
+        Heal
     }
-}

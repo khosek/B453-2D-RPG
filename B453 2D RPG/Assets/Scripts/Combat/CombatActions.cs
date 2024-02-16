@@ -7,7 +7,7 @@ using UnityEngine;
 public class CombatActions : ScriptableObject
 {
     public string DisplayName;
-    public Enums.AttackType ActionType;
+    public AttackType ActionType;
 
     [Header("Damage")]
     public int Damage;
