@@ -24,10 +24,18 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+       OnBeginTurn();
+    }
+
     public void OnBeginTurn()
     {
         curCharacterIndex++;
-        curCharacterIndex %= Characters.Length;
+        if (curCharacterIndex >= Characters.Length)
+        {
+            curCharacterIndex = 0;
+        }
 
         currentCharacter = Characters[curCharacterIndex];
         CombatEvents.instance.e_onBeginTurn.Invoke(currentCharacter);

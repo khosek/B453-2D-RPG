@@ -89,4 +89,9 @@ public class CombatCharacter : MonoBehaviour
 
         TurnManager.instance.EndTurn();
     }
+
+    public float GetHealthPercentage()
+    {
+        return (float) curHp / (float) maxHp;
+    }
 }
