@@ -2999,6 +2999,8 @@ MonoBehaviour:
   combatActions:
   - {fileID: 11400000, guid: 4aeeb082c1a4e6f49b5897a64e081f4b, type: 2}
   - {fileID: 11400000, guid: c3f0e29217a9cf24fb1eaf64bf95a4c8, type: 2}
+  - {fileID: 11400000, guid: 4afba5c8dce130f44b2d2ac9608bd1a3, type: 2}
+  - {fileID: 11400000, guid: 8c623d3416e5fda4a824aa790744ff99, type: 2}
   curHp: 20
   maxHp: 20
   opponent: {fileID: 995557031}

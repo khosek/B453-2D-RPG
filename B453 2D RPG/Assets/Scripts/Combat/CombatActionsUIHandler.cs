@@ -9,7 +9,7 @@ public class CombatActionsUIHandler : MonoBehaviour
     [SerializeField] private GameObject visualContainer;
     [SerializeField] private Button[] combatActionButtons;
 
-    private void Start()
+    private void Awake()
     {
         CombatEvents.instance.e_onBeginTurn.AddListener(OnBeginTurn);
         CombatEvents.instance.e_onBeginTurn.AddListener(OnEndTurn);
